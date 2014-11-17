@@ -6,20 +6,20 @@ Unofficial API for Secret.
 Usage
 =====
 
-**Base URL:** [http://hook-api.herokuapp.com/](http://hook-api.herokuapp.com/)
+**Base URL:** [https://secret-api.herokuapp.com/](https://secret-api.herokuapp.com/)
 
 **Output:** JSON
 
-### Get today's products
+### Get today's popular secrets
 
 Posts are cached for 60 minutes.
 
-#### `GET /today`
+#### `GET /popular`
 
 Example Query:
 
 ```
-http://hook-api.herokuapp.com/today
+http://hook-api.herokuapp.com/popular
 ```
 
 Response:
@@ -29,7 +29,7 @@ Response:
   "status": "success",
   "hunts": [
     {
-      "url": "http://bit.ly/1oShrzl",
+      "url": "http://secret.ly/",
       "permalink": "/posts/the-news-ios",
       "comments": 20,
       "tagline": "Designer News + Hacker News, now on iOS",
