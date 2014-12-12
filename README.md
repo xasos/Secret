@@ -31,9 +31,9 @@ Response:
 ```json
 {
   "status": "success",
-  "hunts": [
+  "secrets": [
     {
-      "url": "http://secret.ly/",
+      "url": "http://secret.ly",
       "permalink": "/p/9sdf03ja001jdm1d980aj",
       "comments": 150,
       "secret": "I stole a tater tot from the table next to me.",
