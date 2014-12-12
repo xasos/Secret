@@ -16,14 +16,14 @@ Usage
 
 ### Get today's popular secrets
 
-Get popular secrets shared today. Optional ID parameter.
+Get popular secrets shared today in a certain category. Available categories include Popular, Money, Travel, College, Tinder, Weddings, Support, Food, Emoji, and Funny.
 
-#### `GET /popular/:id`
+#### `GET /secrets/:category`
 
 Example Query:
 
 ```
-http://hook-api.herokuapp.com/popular
+http://hook-api.herokuapp.com/secrets/popular
 ```
 
 Response:
@@ -72,8 +72,8 @@ Response:
   },
   "comments": [
     {
-      "comment_html": "\n          \n          Yo guys. I have been toying with a scraper for PH for some time now, and was really motivated after seeing <a href=\"https://twitter.com/TosinAF\">@TosinAF</a> 's <a href=\"http://www.producthunt.com/posts/the-news-ios\">thread</a> and packaged all I had in a neat API.<br><br><a href=\"http://hook-api.herokuapp.com/today\">Try it here</a><br><br>Currently it gets today's posts, and has a cache of 1 hour. I hope to see people make a ton of good stuff with it. :)<br><br>PS: I make a lot of cool stuff, and people love it. <a href=\"http://www.goel.im/#subscribe\">Leave your e-mail here</a> and stay tuned about my projects.\n        ",
-      "comment": "\n          \n          Yo guys. I have been toying with a scraper for PH for some time now, and was really motivated after seeing @TosinAF 's thread and packaged all I had in a neat API.Try it hereCurrently it gets today's posts, and has a cache of 1 hour. I hope to see people make a ton of good stuff with it. :)PS: I make a lot of cool stuff, and people love it. Leave your e-mail here and stay tuned about my projects.\n        ",
+      "comment_html": "",
+      "comment": "",
       "user": "red-heart",
       "index": 1
     },
