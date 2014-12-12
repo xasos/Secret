@@ -12,6 +12,7 @@ a {
   font-weight: 600; 
   font-size: 950%;
   text-align: center;
+  margin-bottom: 0px;
 }
 
 #subtitle {
@@ -19,4 +20,5 @@ a {
   font-weight: 600; 
   font-size: 250%;
   text-align: center;
+  margin-top: 0px;
 }
