@@ -12,9 +12,9 @@ Usage
 
 ### Get today's popular secrets
 
-Posts are cached for 60 minutes.
+Get popular secrets shared today. Optional ID parameter.
 
-#### `GET /popular`
+#### `GET /popular/:id`
 
 Example Query:
 
@@ -30,22 +30,52 @@ Response:
   "hunts": [
     {
       "url": "http://secret.ly/",
-      "permalink": "/posts/the-news-ios",
-      "comments": 20,
-      "tagline": "Designer News + Hacker News, now on iOS",
-      "rank": 2,
-      "user": {
-        "name": "Tosin Afolabi",
-        "username": "TosinAF"
-      },
-      "votes": 48,
-      "title": "The News (iOS)"
+      "permalink": "/p/9sdf03ja001jdm1d980aj",
+      "comments": 150,
+      "secret": "I stole a tater tot from the table next to me.",
+      "image": "http://secret.ly/p/asp00q23jmsa.jpg",
+      "hearts": 466
     },
     ...
     ...
 ```
 
-## Credits
+### Get comments for any post
+
+Get comments in plain text and HTML format for a post.
+
+#### `GET /:permalink`
+
+Example Query:
+
+```
+http://hook-api.herokuapp.com/p/9sdf03ja001jdm1d980aj
+```
+
+Response:
+
+```json
+
+{
+  "status": "success",
+  "post": {
+    "url": "http://secret.ly/",
+    "permalink": "/p/9sdf03ja001jdm1d980aj",
+    "comment_count": "150",
+    "secret": "I stole a tater tot from the table next to me.",
+    "image": "http://secret.ly/p/asp00q23jmsa.jpg",
+    "hearts": 466
+  },
+  "comments": [
+    {
+      "comment_html": "\n          \n          Yo guys. I have been toying with a scraper for PH for some time now, and was really motivated after seeing <a href=\"https://twitter.com/TosinAF\">@TosinAF</a> 's <a href=\"http://www.producthunt.com/posts/the-news-ios\">thread</a> and packaged all I had in a neat API.<br><br><a href=\"http://hook-api.herokuapp.com/today\">Try it here</a><br><br>Currently it gets today's posts, and has a cache of 1 hour. I hope to see people make a ton of good stuff with it. :)<br><br>PS: I make a lot of cool stuff, and people love it. <a href=\"http://www.goel.im/#subscribe\">Leave your e-mail here</a> and stay tuned about my projects.\n        ",
+      "comment": "\n          \n          Yo guys. I have been toying with a scraper for PH for some time now, and was really motivated after seeing @TosinAF 's thread and packaged all I had in a neat API.Try it hereCurrently it gets today's posts, and has a cache of 1 hour. I hope to see people make a ton of good stuff with it. :)PS: I make a lot of cool stuff, and people love it. Leave your e-mail here and stay tuned about my projects.\n        ",
+      "user": "red-heart",
+      "index": 1
+    },
+    ...
+    ...
+```
 
 ## License
 [MIT License](LICENSE)
