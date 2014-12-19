@@ -5,7 +5,7 @@ Unofficial API for Secret.
 
 *Note: This is an unofficial API and is __not__ supported or controlled by Secret itself. Any questions, comments, feedback or feature requests should be directed to [xasos](http://github.com/xasos) or via an [issue](https://github.com/xasos/Secret/issues) in this repo.*
 
-**Update 12/18/2014:** Secret has changed business models and removed the functionality to view Secrets on the web.
+**Update 12/18/2014:** Secret has changed business models and removed the functionality to view Secrets on the web. This API is now deprecated.
 
 **NOTICE**: Not complete, under active development.
 
