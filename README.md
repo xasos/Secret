@@ -88,7 +88,7 @@ Start
 
 ```bash
 $ npm install            # install dependencies
-$ node app               # start the server
+$ node secret.js         # start the server
 ```
 
 Deploy to Heroku
