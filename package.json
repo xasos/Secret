@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "request": "~2.51.0",
-    "cheerio": "~0.18.0"
+    "cheerio": "~0.18.0",
+    "loopback-datasource-juggler": "~2.13.0",
+    "loopback": "~2.10.0"
   }
 }
