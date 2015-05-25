@@ -7,7 +7,7 @@ Unofficial API for Secret.
 
 **Update 12/18/2014:** Secret has changed business models and removed the functionality to view Secrets on the web. This API is now deprecated.
 
-**Update #2 04/29/2015:** Secret is no longer a company anymore :(
+**Update 04/29/2015:** Secret is no longer a company anymore :(
 
 **NOTICE**: Not complete, under active development.
 
