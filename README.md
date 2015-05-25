@@ -9,8 +9,6 @@ Unofficial API for Secret.
 
 **Update 04/29/2015:** Secret is no longer a company anymore :(
 
-**NOTICE**: Not complete, under active development.
-
 Usage
 =====
 
@@ -69,7 +67,7 @@ Response:
   "post": {
     "url": "http://secret.ly/",
     "permalink": "/p/9sdf03ja001jdm1d980aj",
-    "comment_count": "150",
+    "comments": "150",
     "secret": "I stole a tater tot from the table next to me.",
     "image": "http://secret.ly/p/asp00q23jmsa.jpg",
     "hearts": 466
