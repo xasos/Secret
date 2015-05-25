@@ -27,7 +27,7 @@ Get popular secrets shared today in a certain category. Available categories inc
 Example Query:
 
 ```
-http://hook-api.herokuapp.com/secrets/popular
+http://secret-api.herokuapp.com/secrets/popular
 ```
 
 Response:
@@ -57,7 +57,7 @@ Get comments in plain text and HTML format for a post.
 Example Query:
 
 ```
-http://hook-api.herokuapp.com/p/9sdf03ja001jdm1d980aj
+http://secret-api.herokuapp.com/p/9sdf03ja001jdm1d980aj
 ```
 
 Response:
