@@ -3,31 +3,36 @@ var request = require('request');
 var loopback = require('loopback');
 var app = loopback();
 
-var baseURL = 'http://secret.ly/';
+var baseURL = 'http://secret.ly';
 
 app.get('/secrets/:category', function(req, res) {
   var category = req.params.category;
   if (category) {
     baseURL += "c/" + category;
   }
-  console.log(baseURL);
-
+  
   request(baseURL, function(err, resp, body) {
     if (!err && resp.statusCode == 200) {
-      console.log("inside");
       var $ = cheerio.load(body);
+      var secrets = [];
       $('id-collection-secret').each(function(i) {
-        var secret = $(this).find('.center-fix').eq(0).text().trim();
-        console.log(secret);
+        var secret = {
+          url: $(this).find('.center-fix').eq(2).text().trim(),
+          permalink = '/' + baseURL,
+          comments = $(this).find('.center-fix').eq(3).length,
+          secret = $(this).find('.center-fix').eq(4).text().trim(),
+          image = $(this).find('.center-fix').eq(5).text().trim(),
+          hearts = $(this).find('.center-fix').eq(6).length
+        };
+        secrets.push(secret);
       });
-
     }
   });
-
-
+  
   res.send({
-    test: "test"
-  })
+    status: "success",
+    secrets: secrets
+  });
 });
 
 app.get('/p/:id', function(req, res) {
@@ -39,17 +44,26 @@ app.get('/p/:id', function(req, res) {
   request(baseURL, function(err, resp, body) {
     if (!err && resp.statusCode == 200) {
       var $ = cheerio.load(body);
-      console.log($);
-      $('id-collection-secret collection-secret').each(function(i) {
-        var secret = $(this).find('.center-fix').eq(0).text().trim();
-        console.log(secret);
-      });
+      var secret = {};
 
+      $('id-collection-secret collection-secret').each(function(i) {
+        var secret = {
+          status = "success"
+          post = {
+            url: $(this).find('.center-fix').eq(2).text().trim(),
+            permalink:  '/' + baseURL,
+            comment_count: $(this).find('.center-fix').eq(3).length
+          },
+          
+          comments = $(this).find('.center-fix').eq(3).length,
+          secret = $(this).find('.center-fix').eq(4).text().trim(),
+          image = $(this).find('.center-fix').eq(5).text().trim(),
+          hearts = $(this).find('.center-fix').eq(6).length
+        };
+      });
+      res.send(secret);
     }
   })
-
-  res.send({
-    test: "test"
-  })
+  
 });
 app.listen(3000);
